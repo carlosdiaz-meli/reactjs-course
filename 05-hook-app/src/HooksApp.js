@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const HooksApp = () => {
+export const HookApp = () => {
     return (
         <>
             <h1>Hola Mundo</h1>
