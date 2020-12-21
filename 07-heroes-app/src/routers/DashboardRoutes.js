@@ -23,7 +23,7 @@ export const DashboardRoutes = () => {
                     <Route exact path="/dc" component={ DcScreen } />
                     <Route exact path="/search" component={ SearchScreen } />
                     
-                    <Redirect path="/marvel" />
+                    <Redirect to="/marvel" />
                 </Switch>
 
             </div>
