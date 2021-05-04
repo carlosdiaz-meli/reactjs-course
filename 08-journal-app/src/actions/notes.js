@@ -13,10 +13,14 @@ export const startNewNote = () => async ( dispatch, getState ) => {
         date: new Date().getTime()
     };
 
-    const doc = await db.collection(`${ uid }/journal/notes`).add( newNote );
+    try {
+        const doc = await db.collection(`${ uid }/journal/notes`).add( newNote );
 
-    dispatch( activeNote( doc.id, newNote ) );
-    dispatch( addNewNote( doc.id, newNote ) );
+        dispatch( activeNote( doc.id, newNote ) );
+        dispatch( addNewNote( doc.id, newNote ) );
+    } catch (error) {
+        console.log('CEDV', error);
+    }
 };
 
 export const activeNote = ( id, note ) => ({
