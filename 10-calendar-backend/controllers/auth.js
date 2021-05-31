@@ -85,6 +85,7 @@ const loginUsuario = async (req = request, res = response) => {
         res.status(500).json({
             ok: false,
             msg: 'Por favor, hable con el admin',
+            error: error,
         });
     }
 };
@@ -100,7 +101,9 @@ const revalidarToken = async (req = request, res = response) => {
 
     res.json({
         ok: true,
-        token
+        token,
+        uid,
+        name
     });
 };
 
