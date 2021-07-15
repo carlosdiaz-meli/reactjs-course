@@ -12,8 +12,8 @@ export const LoginScreen = () => {
     // const { modalOpen } = useSelector(state => state.auth);
 
     const [ formLoginValues, handleLoginInputChange ] = useForm({
-        lEmail: 'cedv90@gmail.com',
-        lPassword: '123456'
+        lEmail: '',
+        lPassword: ''
     });
 
     const [ formRegisterValues, handleRegisterLoginInputChange ] = useForm({
